@@ -1,13 +1,13 @@
 import type { Metadata, Viewport } from 'next'
-import { Sora, Inter } from 'next/font/google'
+import { Space_Grotesk, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
 import './globals.css'
 
-const sora = Sora({ 
+const spaceGrotesk = Space_Grotesk({ 
   subsets: ["latin"],
-  variable: '--font-sora',
+  variable: '--font-space-grotesk',
   display: 'swap',
 });
 
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#1a1d2e',
+  themeColor: '#0B0B0B',
   width: 'device-width',
   initialScale: 1,
 }
@@ -69,7 +69,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${sora.variable} ${inter.variable}`}>
+    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
       <body className="font-sans antialiased bg-background text-foreground min-h-screen flex flex-col">
         <Navigation />
         <main className="flex-1">

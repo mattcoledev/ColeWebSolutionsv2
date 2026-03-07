@@ -45,7 +45,7 @@ export default function AboutPage() {
       <section className="py-16 md:py-24 border-b border-border">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl">
+            <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl">
               About ColeWebSolutions
             </h1>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
@@ -60,7 +60,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
-              <h2 className="font-heading text-3xl font-bold sm:text-4xl mb-6">
+              <h2 className="font-serif text-3xl font-bold sm:text-4xl mb-6">
                 The Story
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -85,19 +85,19 @@ export default function AboutPage() {
                 <CardContent className="p-8">
                   <div className="grid grid-cols-2 gap-8">
                     <div>
-                      <p className="font-heading text-4xl font-bold text-primary">30+</p>
+                      <p className="font-serif text-4xl font-bold text-primary">30+</p>
                       <p className="mt-1 text-sm text-muted-foreground">Active Clients</p>
                     </div>
                     <div>
-                      <p className="font-heading text-4xl font-bold text-primary">10+</p>
+                      <p className="font-serif text-4xl font-bold text-primary">10+</p>
                       <p className="mt-1 text-sm text-muted-foreground">Years Experience</p>
                     </div>
                     <div>
-                      <p className="font-heading text-4xl font-bold text-primary">100%</p>
+                      <p className="font-serif text-4xl font-bold text-primary">100%</p>
                       <p className="mt-1 text-sm text-muted-foreground">Client Retention</p>
                     </div>
                     <div>
-                      <p className="font-heading text-4xl font-bold text-primary">1</p>
+                      <p className="font-serif text-4xl font-bold text-primary">1</p>
                       <p className="mt-1 text-sm text-muted-foreground">Point of Contact</p>
                     </div>
                   </div>
@@ -112,7 +112,7 @@ export default function AboutPage() {
       <section className="py-20 md:py-28 bg-card/50 border-y border-border">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="font-heading text-3xl font-bold sm:text-4xl">The Approach</h2>
+            <h2 className="font-serif text-3xl font-bold sm:text-4xl">The Approach</h2>
             <p className="mt-4 text-lg text-muted-foreground">
               We are not a big agency. That is a feature, not a bug.
             </p>
@@ -125,7 +125,7 @@ export default function AboutPage() {
                   <div className="mx-auto mb-6 inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
                     <value.icon className="h-6 w-6" />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-3">{value.title}</h3>
+                  <h3 className="font-serif text-xl font-semibold mb-3">{value.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{value.description}</p>
                 </CardContent>
               </Card>
@@ -139,7 +139,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
-              <h2 className="font-heading text-3xl font-bold sm:text-4xl mb-6">
+              <h2 className="font-serif text-3xl font-bold sm:text-4xl mb-6">
                 Technologies & Platforms
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
@@ -166,7 +166,7 @@ export default function AboutPage() {
                 <CardContent className="p-8">
                   <div className="flex items-center gap-3 mb-4">
                     <MapPin className="h-5 w-5 text-primary" />
-                    <span className="font-heading font-semibold text-foreground">Based in Tupelo, Mississippi</span>
+                    <span className="font-serif font-semibold text-foreground">Based in Tupelo, Mississippi</span>
                   </div>
                   <p className="text-muted-foreground leading-relaxed mb-6">
                     We are proud to call Tupelo home. While we work with clients anywhere, there is something special about building solutions for the businesses that make our community great.
@@ -185,7 +185,7 @@ export default function AboutPage() {
       <section className="py-20 md:py-28 bg-card/50 border-t border-border">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="font-heading text-3xl font-bold sm:text-4xl">
+            <h2 className="font-serif text-3xl font-bold sm:text-4xl">
               Ready to work together?
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">

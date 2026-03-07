@@ -42,7 +42,7 @@ export default function ContactPage() {
       <section className="py-16 md:py-24 border-b border-border">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl">
+            <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl">
               {"Let's Build Something"}
             </h1>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
@@ -60,7 +60,7 @@ export default function ContactPage() {
             <div className="lg:col-span-3">
               <Card className="bg-card border-border">
                 <CardContent className="p-6 md:p-8">
-                  <h2 className="font-heading text-2xl font-bold mb-6">Send a Message</h2>
+                  <h2 className="font-serif text-2xl font-bold mb-6">Send a Message</h2>
                   <ContactForm />
                 </CardContent>
               </Card>
@@ -70,7 +70,7 @@ export default function ContactPage() {
             <div className="lg:col-span-2">
               <div className="space-y-6">
                 <div>
-                  <h2 className="font-heading text-2xl font-bold mb-4">Get in Touch</h2>
+                  <h2 className="font-serif text-2xl font-bold mb-4">Get in Touch</h2>
                   <p className="text-muted-foreground leading-relaxed">
                     Prefer to reach out directly? Use any of the methods below. We typically respond within one business day.
                   </p>
@@ -105,7 +105,7 @@ export default function ContactPage() {
                 {/* Calendly CTA */}
                 <Card className="bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border-primary/20">
                   <CardContent className="p-6">
-                    <h3 className="font-heading font-semibold mb-2">Prefer to book a call?</h3>
+                    <h3 className="font-serif font-semibold mb-2">Prefer to book a call?</h3>
                     <p className="text-sm text-muted-foreground mb-4">
                       Skip the back-and-forth. Pick a time that works for you and we will chat.
                     </p>

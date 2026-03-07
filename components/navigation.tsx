@@ -21,7 +21,7 @@ export function Navigation() {
       <nav className="container mx-auto flex h-16 items-center justify-between px-4 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <span className="font-heading text-xl font-bold text-foreground">
+          <span className="font-serif text-xl font-bold text-foreground tracking-tight">
             Cole<span className="text-primary">Web</span>Solutions
           </span>
         </Link>

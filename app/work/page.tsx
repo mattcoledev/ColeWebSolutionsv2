@@ -62,7 +62,7 @@ export default function WorkPage() {
       <section className="py-16 md:py-24 border-b border-border">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl">
+            <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl">
               Our Work
             </h1>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
@@ -96,7 +96,7 @@ export default function WorkPage() {
 
                   {/* Content */}
                   <div className="p-6">
-                    <h2 className="font-heading text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                    <h2 className="font-serif text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
                       {project.title}
                     </h2>
                     <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
@@ -125,7 +125,7 @@ export default function WorkPage() {
       <section className="py-20 md:py-28 bg-card/50 border-t border-border">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="font-heading text-3xl font-bold sm:text-4xl">
+            <h2 className="font-serif text-3xl font-bold sm:text-4xl">
               Want results like these?
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">

@@ -24,7 +24,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block">
-              <span className="font-heading text-xl font-bold text-foreground">
+              <span className="font-serif text-xl font-bold text-foreground tracking-tight">
                 Cole<span className="text-primary">Web</span>Solutions
               </span>
             </Link>
@@ -48,7 +48,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-heading text-sm font-semibold text-foreground">Quick Links</h3>
+            <h3 className="font-serif text-sm font-semibold text-foreground uppercase tracking-wider">Quick Links</h3>
             <ul className="mt-4 space-y-3">
               {footerLinks.navigation.map((link) => (
                 <li key={link.href}>
@@ -65,7 +65,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-heading text-sm font-semibold text-foreground">Contact</h3>
+            <h3 className="font-serif text-sm font-semibold text-foreground uppercase tracking-wider">Contact</h3>
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               <li>
                 <span className="block text-foreground/70">Email</span>

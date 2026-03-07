@@ -49,7 +49,7 @@ export default function ServicesPage() {
       <section className="py-16 md:py-24 border-b border-border">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl">
+            <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl">
               What We Build
             </h1>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
@@ -67,7 +67,7 @@ export default function ServicesPage() {
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary mb-6">
                 <Code2 className="h-6 w-6" />
               </div>
-              <h2 className="font-heading text-3xl font-bold sm:text-4xl">
+              <h2 className="font-serif text-3xl font-bold sm:text-4xl">
                 Custom Web Solutions & App Development
               </h2>
               <p className="mt-6 text-muted-foreground leading-relaxed">
@@ -79,7 +79,7 @@ export default function ServicesPage() {
 
               {/* Examples */}
               <div className="mt-8">
-                <h3 className="font-heading text-lg font-semibold mb-4">Example Projects</h3>
+                <h3 className="font-serif text-lg font-semibold mb-4">Example Projects</h3>
                 <div className="grid gap-3 sm:grid-cols-2">
                   {customSolutionsExamples.map((example) => (
                     <div key={example.text} className="flex items-center gap-3">
@@ -100,7 +100,7 @@ export default function ServicesPage() {
                   <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary mb-2">
                     <Lightbulb className="h-5 w-5" />
                   </div>
-                  <CardTitle className="font-heading">This is for you if...</CardTitle>
+                  <CardTitle className="font-serif">This is for you if...</CardTitle>
                   <CardDescription>Custom solutions make sense when your business has unique needs.</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -129,7 +129,7 @@ export default function ServicesPage() {
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary mb-6">
                 <Globe className="h-6 w-6" />
               </div>
-              <h2 className="font-heading text-3xl font-bold sm:text-4xl">
+              <h2 className="font-serif text-3xl font-bold sm:text-4xl">
                 Website Redesigns
               </h2>
               <p className="mt-6 text-muted-foreground leading-relaxed">
@@ -143,7 +143,7 @@ export default function ServicesPage() {
             <div className="lg:order-1">
               <Card className="bg-card border-border">
                 <CardHeader>
-                  <CardTitle className="font-heading">What is Included</CardTitle>
+                  <CardTitle className="font-serif">What is Included</CardTitle>
                   <CardDescription>Every redesign includes these core elements.</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -172,7 +172,7 @@ export default function ServicesPage() {
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary mb-6">
                 <Server className="h-6 w-6" />
               </div>
-              <h2 className="font-heading text-3xl font-bold sm:text-4xl">
+              <h2 className="font-serif text-3xl font-bold sm:text-4xl">
                 Managed Hosting
               </h2>
               <p className="mt-6 text-muted-foreground leading-relaxed">
@@ -189,7 +189,7 @@ export default function ServicesPage() {
             <div>
               <Card className="bg-card border-border">
                 <CardHeader>
-                  <CardTitle className="font-heading">What is Included</CardTitle>
+                  <CardTitle className="font-serif">What is Included</CardTitle>
                   <CardDescription>Everything you need for peace of mind.</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -214,7 +214,7 @@ export default function ServicesPage() {
       <section className="py-20 md:py-28 bg-card/50 border-t border-border">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="font-heading text-3xl font-bold sm:text-4xl">
+            <h2 className="font-serif text-3xl font-bold sm:text-4xl">
               Not sure which service you need?
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">

@@ -65,7 +65,7 @@ export function ContactForm() {
         <div className="mx-auto mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
           <CheckCircle2 className="h-8 w-8" />
         </div>
-        <h3 className="font-heading text-xl font-semibold mb-2">Message Sent!</h3>
+        <h3 className="font-serif text-xl font-semibold mb-2">Message Sent!</h3>
         <p className="text-muted-foreground">
           Thanks for reaching out. We will get back to you within one business day.
         </p>

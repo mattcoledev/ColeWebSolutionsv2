@@ -65,7 +65,7 @@ export default function BlogPage() {
       <section className="py-16 md:py-24 border-b border-border">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl">
+            <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl">
               Blog
             </h1>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
@@ -105,7 +105,7 @@ export default function BlogPage() {
                         {post.readTime}
                       </span>
                     </div>
-                    <h2 className={`font-heading font-semibold text-foreground group-hover:text-primary transition-colors ${index === 0 ? "text-2xl md:text-3xl" : "text-xl"}`}>
+                    <h2 className={`font-serif font-semibold text-foreground group-hover:text-primary transition-colors ${index === 0 ? "text-2xl md:text-3xl" : "text-xl"}`}>
                       {post.title}
                     </h2>
                     <p className="mt-3 text-muted-foreground leading-relaxed">
@@ -132,7 +132,7 @@ export default function BlogPage() {
       <section className="py-20 md:py-28 bg-card/50 border-t border-border">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="font-heading text-3xl font-bold sm:text-4xl">
+            <h2 className="font-serif text-3xl font-bold sm:text-4xl">
               Need help with your website?
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">

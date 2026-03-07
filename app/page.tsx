@@ -66,7 +66,7 @@ export default function HomePage() {
 
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-balance">
+            <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-balance">
               Websites That Work.{" "}
               <span className="text-primary">Solutions That Scale.</span>
             </h1>
@@ -94,14 +94,14 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="font-heading text-3xl font-bold text-primary">{stat.value}</div>
+                <div className="font-serif text-3xl font-bold text-primary">{stat.value}</div>
                 <div className="mt-1 text-sm text-muted-foreground">{stat.label}</div>
               </div>
             ))}
             <div className="text-center">
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-                <span className="font-heading text-lg font-semibold text-foreground">Based in Tupelo, MS</span>
+                <span className="font-serif text-lg font-semibold text-foreground">Based in Tupelo, MS</span>
               </div>
             </div>
           </div>
@@ -112,7 +112,7 @@ export default function HomePage() {
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="font-heading text-3xl font-bold sm:text-4xl">What We Build</h2>
+            <h2 className="font-serif text-3xl font-bold sm:text-4xl">What We Build</h2>
             <p className="mt-4 text-muted-foreground text-lg">
               Whether you need a fresh coat of paint or a ground-up custom solution, we have got you covered.
             </p>
@@ -128,7 +128,7 @@ export default function HomePage() {
                   <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                     <service.icon className="h-6 w-6" />
                   </div>
-                  <CardTitle className="font-heading text-xl">{service.title}</CardTitle>
+                  <CardTitle className="font-serif text-xl">{service.title}</CardTitle>
                   <CardDescription className="text-muted-foreground leading-relaxed">
                     {service.description}
                   </CardDescription>
@@ -152,7 +152,7 @@ export default function HomePage() {
       <section className="py-20 md:py-28 bg-card/50 border-y border-border">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="font-heading text-3xl font-bold sm:text-4xl">Why ColeWebSolutions</h2>
+            <h2 className="font-serif text-3xl font-bold sm:text-4xl">Why ColeWebSolutions</h2>
             <p className="mt-4 text-muted-foreground text-lg">
               We are not a big agency — and that is exactly what makes us different.
             </p>
@@ -164,7 +164,7 @@ export default function HomePage() {
                 <div className="mx-auto mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <item.icon className="h-6 w-6" />
                 </div>
-                <h3 className="font-heading text-lg font-semibold">{item.title}</h3>
+                <h3 className="font-serif text-lg font-semibold">{item.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                   {item.description}
                 </p>
@@ -182,7 +182,7 @@ export default function HomePage() {
               <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
             </div>
             <div className="max-w-2xl">
-              <h2 className="font-heading text-3xl font-bold sm:text-4xl">
+              <h2 className="font-serif text-3xl font-bold sm:text-4xl">
                 Ready to upgrade your web presence?
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">

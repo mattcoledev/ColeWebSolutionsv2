@@ -183,7 +183,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                 </Badge>
               ))}
             </div>
-            <h1 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl">
+            <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl">
               {project.title}
             </h1>
             <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
@@ -216,7 +216,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             <div className="lg:col-span-2 space-y-12">
               {/* The Challenge */}
               <div>
-                <h2 className="font-heading text-2xl font-bold mb-4">The Challenge</h2>
+                <h2 className="font-serif text-2xl font-bold mb-4">The Challenge</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   {project.challenge}
                 </p>
@@ -224,7 +224,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
 
               {/* The Solution */}
               <div>
-                <h2 className="font-heading text-2xl font-bold mb-4">The Solution</h2>
+                <h2 className="font-serif text-2xl font-bold mb-4">The Solution</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   {project.solution}
                 </p>
@@ -251,7 +251,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             <div className="space-y-8">
               {/* Tech Stack */}
               <div>
-                <h3 className="font-heading text-lg font-semibold mb-4">Technologies Used</h3>
+                <h3 className="font-serif text-lg font-semibold mb-4">Technologies Used</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <Badge key={tech} variant="outline">
@@ -263,7 +263,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
 
               {/* Results */}
               <div>
-                <h3 className="font-heading text-lg font-semibold mb-4">Results</h3>
+                <h3 className="font-serif text-lg font-semibold mb-4">Results</h3>
                 <div className="space-y-4">
                   {project.results.map((result, i) => (
                     <div key={result.label} className="flex items-start gap-3">
@@ -271,7 +271,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                         {i === 0 ? <TrendingUp className="h-4 w-4" /> : i === 1 ? <Zap className="h-4 w-4" /> : <Clock className="h-4 w-4" />}
                       </div>
                       <div>
-                        <p className="font-heading text-xl font-bold text-primary">{result.value}</p>
+                        <p className="font-serif text-xl font-bold text-primary">{result.value}</p>
                         <p className="text-sm text-muted-foreground">{result.label}</p>
                       </div>
                     </div>
@@ -287,7 +287,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       <section className="py-20 md:py-28 bg-card/50 border-t border-border">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="font-heading text-3xl font-bold sm:text-4xl">
+            <h2 className="font-serif text-3xl font-bold sm:text-4xl">
               Want results like this?
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
