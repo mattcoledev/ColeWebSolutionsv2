@@ -4,6 +4,8 @@ import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+// [PLACEHOLDER] Replace with real project data when available
+
 export const metadata: Metadata = {
   title: "Our Work",
   description: "Portfolio of web development projects by ColeWebSolutions. Custom web applications, website redesigns, and more.",
@@ -76,51 +78,42 @@ export default function WorkPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="space-y-16 md:space-y-24">
             {projects.map((project, index) => (
-              <Link
+              <article 
                 key={project.slug}
-                href={`/work/${project.slug}`}
-                className="group block"
+                className={`grid gap-8 lg:gap-16 items-center lg:grid-cols-2`}
               >
-                <article className={`grid gap-8 lg:gap-16 items-center ${
-                  index % 2 === 0 ? 'lg:grid-cols-2' : 'lg:grid-cols-2'
+                {/* Image */}
+                <div className={`relative aspect-[16/10] rounded-lg overflow-hidden bg-section-light-foreground/5 ${
+                  index % 2 === 1 ? 'lg:order-2' : ''
                 }`}>
-                  {/* Image */}
-                  <div className={`relative aspect-[16/10] rounded-lg overflow-hidden bg-section-light-foreground/5 ${
-                    index % 2 === 1 ? 'lg:order-2' : ''
-                  }`}>
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
 
-                  {/* Content */}
-                  <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tags.map((tag) => (
-                        <span 
-                          key={tag} 
-                          className="text-xs font-medium uppercase tracking-widest text-primary"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <h2 className="font-serif text-3xl font-bold tracking-tight md:text-4xl group-hover:text-primary transition-colors">
-                      {project.title}
-                    </h2>
-                    <p className="mt-4 text-lg text-section-light-muted leading-relaxed">
-                      {project.description}
-                    </p>
-                    <div className="mt-6 inline-flex items-center text-base font-medium text-primary">
-                      View Case Study
-                      <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-2" />
-                    </div>
+                {/* Content */}
+                <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
+                  <div className="flex flex-wrap gap-3 mb-4">
+                    {project.tags.map((tag) => (
+                      <span 
+                        key={tag} 
+                        className="text-xs font-medium uppercase tracking-widest text-primary"
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                </article>
-              </Link>
+                  <h2 className="font-serif text-3xl font-bold tracking-tight md:text-4xl text-section-light-foreground">
+                    {project.title}
+                  </h2>
+                  <p className="mt-4 text-lg text-section-light-muted leading-relaxed">
+                    {project.description}
+                  </p>
+                </div>
+              </article>
             ))}
           </div>
         </div>
