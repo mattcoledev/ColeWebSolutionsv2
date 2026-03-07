@@ -69,14 +69,14 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               <li>
                 <span className="block text-foreground/70">Email</span>
-                <a href="mailto:hello@colewebsolutions.com" className="hover:text-primary transition-colors">
-                  hello@colewebsolutions.com
+                <a href="mailto:matt@colewebsolutions.com" className="hover:text-primary transition-colors">
+                  matt@colewebsolutions.com
                 </a>
               </li>
               <li>
                 <span className="block text-foreground/70">Phone</span>
-                <a href="tel:+16625551234" className="hover:text-primary transition-colors">
-                  (662) 555-1234
+                <a href="tel:+16624018289" className="hover:text-primary transition-colors">
+                  (662) 401-8289
                 </a>
               </li>
               <li>

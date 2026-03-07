@@ -11,14 +11,14 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@colewebsolutions.com",
-    href: "mailto:hello@colewebsolutions.com",
+    value: "matt@colewebsolutions.com",
+    href: "mailto:matt@colewebsolutions.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "(662) 555-1234",
-    href: "tel:+16625551234",
+    value: "(662) 401-8289",
+    href: "tel:+16624018289",
   },
   {
     icon: MapPin,

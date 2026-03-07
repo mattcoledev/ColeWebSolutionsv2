@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
@@ -39,8 +39,15 @@ export function Navigation() {
           ))}
         </div>
 
-        {/* CTA Button - Desktop */}
-        <div className="hidden md:block">
+        {/* Phone + CTA Button - Desktop */}
+        <div className="hidden md:flex md:items-center md:gap-6">
+          <a 
+            href="tel:+16624018289" 
+            className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            <Phone className="h-4 w-4" />
+            (662) 401-8289
+          </a>
           <Button asChild>
             <Link href="/contact">Get a Quote</Link>
           </Button>
