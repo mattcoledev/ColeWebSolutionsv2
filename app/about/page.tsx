@@ -1,8 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowRight, MapPin, Users, MessageSquare, Heart } from "lucide-react"
+import { ArrowRight, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
   title: "About",
@@ -10,192 +9,210 @@ export const metadata: Metadata = {
 }
 
 const technologies = [
-  { name: "Umbraco CMS", category: "CMS" },
-  { name: ".NET / C#", category: "Backend" },
-  { name: "JavaScript / TypeScript", category: "Frontend" },
-  { name: "React / Next.js", category: "Frontend" },
-  { name: "SQL Server", category: "Database" },
-  { name: "PostgreSQL", category: "Database" },
-  { name: "Azure", category: "Cloud" },
-  { name: "HTML5 / CSS3", category: "Frontend" },
+  "Umbraco CMS",
+  ".NET / C#",
+  "JavaScript / TypeScript",
+  "React / Next.js",
+  "SQL Server",
+  "PostgreSQL",
+  "Azure",
+  "HTML5 / CSS3",
 ]
 
 const values = [
   {
-    icon: MessageSquare,
     title: "Direct Communication",
-    description: "When you work with ColeWebSolutions, you work directly with the person building your site. No handoffs, no miscommunication, no surprises.",
+    description: "When you work with ColeWebSolutions, you work directly with the person building your site. No handoffs, no miscommunication.",
   },
   {
-    icon: Users,
     title: "Long-Term Relationships",
-    description: "We are not looking for one-off projects. We build partnerships that last, growing alongside your business for years to come.",
+    description: "We build partnerships that last, growing alongside your business for years to come.",
   },
   {
-    icon: Heart,
     title: "Quality Over Quantity",
-    description: "We take on a limited number of clients to ensure every project gets the attention it deserves. Your success is our reputation.",
+    description: "We take on a limited number of clients to ensure every project gets the attention it deserves.",
   },
+]
+
+const stats = [
+  { value: "30+", label: "Active Clients" },
+  { value: "10+", label: "Years Experience" },
+  { value: "100%", label: "Client Retention" },
 ]
 
 export default function AboutPage() {
   return (
     <div className="flex flex-col">
-      {/* Header */}
-      <section className="py-16 md:py-24 border-b border-border">
+      {/* Header - Dark */}
+      <section className="py-24 md:py-32">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl">
-              About ColeWebSolutions
+            <h1 className="font-serif text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl leading-[0.95]">
+              Not an Agency. A Partner.
             </h1>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Building digital solutions for businesses that want a partner, not just a vendor.
+            <p className="mt-8 text-xl text-muted-foreground leading-relaxed">
+              ColeWebSolutions is a one-person operation. That means you talk 
+              directly to the person who builds your site.
             </p>
           </div>
         </div>
       </section>
 
-      {/* The Story */}
-      <section className="py-20 md:py-28">
+      {/* The Story - Light */}
+      <section className="py-24 md:py-32 bg-section-light text-section-light-foreground">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="grid gap-16 lg:grid-cols-2 lg:gap-20 items-start">
             <div>
-              <h2 className="font-serif text-3xl font-bold sm:text-4xl mb-6">
+              <p className="text-sm font-medium uppercase tracking-widest text-primary mb-4">
                 The Story
+              </p>
+              <h2 className="font-serif text-4xl font-bold tracking-tight md:text-5xl leading-[1.1]">
+                Building for Real Businesses Since Day One
               </h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  [PLACEHOLDER - Add your personal story here. How did you get into web development? What drove you to start ColeWebSolutions? This should feel authentic and human, not like a corporate bio.]
-                </p>
-                <p>
-                  ColeWebSolutions was born from a simple belief: businesses deserve better than template websites and faceless agencies. Every business has unique challenges, and cookie-cutter solutions rarely solve them.
-                </p>
-                <p>
-                  What started as helping local Tupelo businesses modernize their web presence has grown into a full-service web development practice. But no matter how much we grow, the fundamentals stay the same: quality work, honest communication, and genuine investment in our clients success.
-                </p>
-                <p>
-                  Today, we serve over 30 clients across Mississippi and beyond. From Umbraco redesigns for established businesses to custom-built applications for growing companies, we are proud of the work we do and the relationships we have built.
-                </p>
-              </div>
             </div>
-
-            <div className="lg:mt-8">
-              {/* Stats Card */}
-              <Card className="bg-card border-border">
-                <CardContent className="p-8">
-                  <div className="grid grid-cols-2 gap-8">
-                    <div>
-                      <p className="font-serif text-4xl font-bold text-primary">30+</p>
-                      <p className="mt-1 text-sm text-muted-foreground">Active Clients</p>
-                    </div>
-                    <div>
-                      <p className="font-serif text-4xl font-bold text-primary">10+</p>
-                      <p className="mt-1 text-sm text-muted-foreground">Years Experience</p>
-                    </div>
-                    <div>
-                      <p className="font-serif text-4xl font-bold text-primary">100%</p>
-                      <p className="mt-1 text-sm text-muted-foreground">Client Retention</p>
-                    </div>
-                    <div>
-                      <p className="font-serif text-4xl font-bold text-primary">1</p>
-                      <p className="mt-1 text-sm text-muted-foreground">Point of Contact</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="space-y-6 text-lg text-section-light-muted leading-relaxed">
+              <p>
+                [PLACEHOLDER - Add your personal story here. How did you get into web development? 
+                What drove you to start ColeWebSolutions? This should feel authentic and human.]
+              </p>
+              <p>
+                ColeWebSolutions was born from a simple belief: businesses deserve better than 
+                template websites and faceless agencies. Every business has unique challenges, 
+                and cookie-cutter solutions rarely solve them.
+              </p>
+              <p>
+                What started as helping local Tupelo businesses modernize their web presence 
+                has grown into a full-service web development practice. But no matter how much 
+                we grow, the fundamentals stay the same: quality work, honest communication, 
+                and genuine investment in our clients success.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The Approach */}
-      <section className="py-20 md:py-28 bg-card/50 border-y border-border">
+      {/* Stats Bar - Dark */}
+      <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="font-serif text-3xl font-bold sm:text-4xl">The Approach</h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              We are not a big agency. That is a feature, not a bug.
-            </p>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-3">
-            {values.map((value) => (
-              <Card key={value.title} className="bg-card border-border text-center">
-                <CardContent className="p-8">
-                  <div className="mx-auto mb-6 inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <value.icon className="h-6 w-6" />
-                  </div>
-                  <h3 className="font-serif text-xl font-semibold mb-3">{value.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{value.description}</p>
-                </CardContent>
-              </Card>
+          <div className="flex flex-wrap justify-center gap-16 md:gap-24 lg:gap-32">
+            {stats.map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="font-serif text-5xl font-bold text-primary md:text-6xl">
+                  {stat.value}
+                </div>
+                <div className="mt-2 text-sm text-muted-foreground">
+                  {stat.label}
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Technologies */}
-      <section className="py-20 md:py-28">
+      {/* The Approach - Light */}
+      <section className="py-24 md:py-32 bg-section-light text-section-light-foreground">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-            <div>
-              <h2 className="font-serif text-3xl font-bold sm:text-4xl mb-6">
-                Technologies & Platforms
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                We use modern, proven technologies that are built to last. No trendy frameworks that will be obsolete in two years — just solid foundations that scale with your business.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                {technologies.map((tech) => (
-                  <div
-                    key={tech.name}
-                    className="flex items-center gap-3 p-3 rounded-lg bg-secondary/50 border border-border"
-                  >
-                    <div className="h-2 w-2 rounded-full bg-primary" />
-                    <div>
-                      <p className="text-sm font-medium text-foreground">{tech.name}</p>
-                      <p className="text-xs text-muted-foreground">{tech.category}</p>
-                    </div>
+          <div className="max-w-3xl">
+            <p className="text-sm font-medium uppercase tracking-widest text-primary mb-4">
+              The Approach
+            </p>
+            <h2 className="font-serif text-4xl font-bold tracking-tight md:text-5xl leading-[1.1]">
+              We Are Not a Big Agency. That Is a Feature.
+            </h2>
+            
+            <div className="mt-12 space-y-8">
+              {values.map((value) => (
+                <div key={value.title} className="flex gap-4">
+                  <Check className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-serif text-xl font-semibold">{value.title}</h3>
+                    <p className="mt-2 text-lg text-section-light-muted leading-relaxed">
+                      {value.description}
+                    </p>
                   </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="lg:mt-8">
-              <Card className="bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border-primary/20">
-                <CardContent className="p-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <MapPin className="h-5 w-5 text-primary" />
-                    <span className="font-serif font-semibold text-foreground">Based in Tupelo, Mississippi</span>
-                  </div>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    We are proud to call Tupelo home. While we work with clients anywhere, there is something special about building solutions for the businesses that make our community great.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Local clients enjoy the option of face-to-face meetings. Remote clients get the same level of attention through video calls and responsive communication.
-                  </p>
-                </CardContent>
-              </Card>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 md:py-28 bg-card/50 border-t border-border">
+      {/* Technologies - Dark */}
+      <section className="py-24 md:py-32">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="font-serif text-3xl font-bold sm:text-4xl">
-              Ready to work together?
+          <div className="grid gap-16 lg:grid-cols-2 lg:gap-20 items-start">
+            <div>
+              <p className="text-sm font-medium uppercase tracking-widest text-primary mb-4">
+                Technologies
+              </p>
+              <h2 className="font-serif text-4xl font-bold tracking-tight md:text-5xl leading-[1.1]">
+                Modern Tools. Proven Platforms.
+              </h2>
+              <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+                We use technologies that are built to last. No trendy frameworks that will 
+                be obsolete in two years — just solid foundations that scale with your business.
+              </p>
+            </div>
+            <div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {technologies.map((tech) => (
+                  <div
+                    key={tech}
+                    className="flex items-center gap-3 text-lg"
+                  >
+                    <div className="h-2 w-2 rounded-full bg-primary flex-shrink-0" />
+                    <span>{tech}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Location - Light */}
+      <section className="py-24 md:py-32 bg-section-light text-section-light-foreground">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-sm font-medium uppercase tracking-widest text-primary mb-4">
+              Location
+            </p>
+            <h2 className="font-serif text-4xl font-bold tracking-tight md:text-5xl leading-[1.1]">
+              Based in Tupelo, Mississippi
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-6 text-lg text-section-light-muted leading-relaxed">
+              We are proud to call Tupelo home. While we work with clients anywhere, 
+              there is something special about building solutions for the businesses 
+              that make our community great.
+            </p>
+            <p className="mt-4 text-lg text-section-light-muted leading-relaxed">
+              Local clients enjoy face-to-face meetings. Remote clients get the same 
+              level of attention through video calls and responsive communication.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA - Accent */}
+      <section className="py-24 md:py-32 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-4xl font-bold tracking-tight md:text-5xl">
+              Ready to Work Together?
+            </h2>
+            <p className="mt-6 text-lg text-primary-foreground/80 leading-relaxed">
               {"Let's discuss your project and see if we are a good fit."}
             </p>
-            <div className="mt-8">
-              <Button size="lg" asChild>
+            <div className="mt-10">
+              <Button 
+                size="lg" 
+                variant="secondary" 
+                className="bg-white text-primary hover:bg-white/90 text-base px-8 py-6"
+                asChild
+              >
                 <Link href="/contact">
                   Get in Touch
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </div>

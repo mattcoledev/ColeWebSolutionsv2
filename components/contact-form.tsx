@@ -66,7 +66,7 @@ export function ContactForm() {
           <CheckCircle2 className="h-8 w-8" />
         </div>
         <h3 className="font-serif text-xl font-semibold mb-2">Message Sent!</h3>
-        <p className="text-muted-foreground">
+        <p className="text-section-light-muted">
           Thanks for reaching out. We will get back to you within one business day.
         </p>
       </div>
@@ -78,14 +78,14 @@ export function ContactForm() {
       <div className="grid gap-6 sm:grid-cols-2">
         {/* Name */}
         <div className="space-y-2">
-          <Label htmlFor="name">
+          <Label htmlFor="name" className="text-section-light-foreground">
             Name <span className="text-destructive">*</span>
           </Label>
           <Input
             id="name"
             name="name"
             placeholder="John Smith"
-            className={errors.name ? "border-destructive" : ""}
+            className={`bg-white border-section-light-foreground/20 text-section-light-foreground placeholder:text-section-light-muted ${errors.name ? "border-destructive" : ""}`}
           />
           {errors.name && (
             <p className="text-sm text-destructive">{errors.name}</p>
@@ -94,7 +94,7 @@ export function ContactForm() {
 
         {/* Email */}
         <div className="space-y-2">
-          <Label htmlFor="email">
+          <Label htmlFor="email" className="text-section-light-foreground">
             Email <span className="text-destructive">*</span>
           </Label>
           <Input
@@ -102,7 +102,7 @@ export function ContactForm() {
             name="email"
             type="email"
             placeholder="john@example.com"
-            className={errors.email ? "border-destructive" : ""}
+            className={`bg-white border-section-light-foreground/20 text-section-light-foreground placeholder:text-section-light-muted ${errors.email ? "border-destructive" : ""}`}
           />
           {errors.email && (
             <p className="text-sm text-destructive">{errors.email}</p>
@@ -113,31 +113,39 @@ export function ContactForm() {
       <div className="grid gap-6 sm:grid-cols-2">
         {/* Phone */}
         <div className="space-y-2">
-          <Label htmlFor="phone">Phone (optional)</Label>
+          <Label htmlFor="phone" className="text-section-light-foreground">
+            Phone (optional)
+          </Label>
           <Input
             id="phone"
             name="phone"
             type="tel"
             placeholder="(662) 555-1234"
+            className="bg-white border-section-light-foreground/20 text-section-light-foreground placeholder:text-section-light-muted"
           />
         </div>
 
         {/* Company */}
         <div className="space-y-2">
-          <Label htmlFor="company">Company / Organization (optional)</Label>
+          <Label htmlFor="company" className="text-section-light-foreground">
+            Company / Organization (optional)
+          </Label>
           <Input
             id="company"
             name="company"
             placeholder="Acme Inc."
+            className="bg-white border-section-light-foreground/20 text-section-light-foreground placeholder:text-section-light-muted"
           />
         </div>
       </div>
 
       {/* Service Type */}
       <div className="space-y-2">
-        <Label htmlFor="service">What are you looking for?</Label>
+        <Label htmlFor="service" className="text-section-light-foreground">
+          What are you looking for?
+        </Label>
         <Select name="service">
-          <SelectTrigger>
+          <SelectTrigger className="bg-white border-section-light-foreground/20 text-section-light-foreground">
             <SelectValue placeholder="Select a service..." />
           </SelectTrigger>
           <SelectContent>
@@ -152,18 +160,20 @@ export function ContactForm() {
 
       {/* Message */}
       <div className="space-y-2">
-        <Label htmlFor="message">Tell us about your project (optional)</Label>
+        <Label htmlFor="message" className="text-section-light-foreground">
+          Tell us about your project (optional)
+        </Label>
         <Textarea
           id="message"
           name="message"
           placeholder="Describe your project, goals, timeline, or any questions you have..."
           rows={5}
-          className="resize-none"
+          className="resize-none bg-white border-section-light-foreground/20 text-section-light-foreground placeholder:text-section-light-muted"
         />
       </div>
 
       {/* Submit */}
-      <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+      <Button type="submit" size="lg" className="w-full text-base py-6" disabled={isSubmitting}>
         {isSubmitting ? (
           <>
             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -174,7 +184,7 @@ export function ContactForm() {
         )}
       </Button>
 
-      <p className="text-center text-sm text-muted-foreground">
+      <p className="text-center text-sm text-section-light-muted">
         We typically respond within one business day.
       </p>
     </form>

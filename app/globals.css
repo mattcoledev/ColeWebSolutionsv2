@@ -3,14 +3,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* ColeWebSolutions - Minimal B&W with Electric Blue accent */
-/* Black: #0B0B0B | White: #FFFFFF | Warm Gray: #D6D6D6 | Accent: #2563EB */
+/* ColeWebSolutions - B&W with Electric Blue accent + Section Contrast */
+/* Dark: #0B0B0B | Light: #F8FAFC | Soft Gray: #E5E7EB | Accent: #2563EB */
 :root {
   /* Pure black background */
   --background: #0B0B0B;
   --foreground: #FFFFFF;
   
-  /* Slightly elevated card surfaces */
+  /* Card surfaces */
   --card: #141414;
   --card-foreground: #FFFFFF;
   
@@ -21,12 +21,12 @@
   --primary: #2563EB;
   --primary-foreground: #FFFFFF;
   
-  /* Warm gray for secondary elements */
+  /* Secondary elements */
   --secondary: #1C1C1C;
-  --secondary-foreground: #D6D6D6;
+  --secondary-foreground: #D1D5DB;
   
   --muted: #1C1C1C;
-  --muted-foreground: #A0A0A0;
+  --muted-foreground: #9CA3AF;
   
   /* Electric blue accent */
   --accent: #2563EB;
@@ -46,6 +46,11 @@
   --chart-5: #BFDBFE;
   
   --radius: 0.375rem;
+  
+  /* Light section colors */
+  --section-light: #F8FAFC;
+  --section-light-foreground: #0B0B0B;
+  --section-light-muted: #6B7280;
   
   --sidebar: #0B0B0B;
   --sidebar-foreground: #FFFFFF;
@@ -98,6 +103,9 @@
   --font-mono: 'JetBrains Mono', 'JetBrains Mono Fallback', monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-section-light: var(--section-light);
+  --color-section-light-foreground: var(--section-light-foreground);
+  --color-section-light-muted: var(--section-light-muted);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
