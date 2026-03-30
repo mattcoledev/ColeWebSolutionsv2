@@ -15,7 +15,7 @@ const posts = [
     slug: "why-umbraco-for-business-websites",
     title: "Why Umbraco Is the Best CMS for Business Websites",
     excerpt: "Discover why enterprise-grade businesses are choosing Umbraco over WordPress and other popular CMS platforms for their web presence.",
-    image: "/blog/umbraco-cms.jpg",
+    image: "https://picsum.photos/seed/cws-blog-cms/1200/750",
     date: "2024-01-15",
     readTime: "5 min",
     category: "CMS",
@@ -24,7 +24,7 @@ const posts = [
     slug: "custom-vs-template-websites",
     title: "Custom vs. Template Websites: Which Is Right for Your Business?",
     excerpt: "A practical guide to deciding between a custom-built website and a template-based solution for your business needs.",
-    image: "/blog/custom-vs-template.jpg",
+    image: "https://picsum.photos/seed/cws-blog-custom/1200/750",
     date: "2024-01-08",
     readTime: "7 min",
     category: "Web Development",
@@ -33,7 +33,7 @@ const posts = [
     slug: "website-performance-matters",
     title: "Why Website Performance Matters More Than Ever",
     excerpt: "Learn how page speed affects your SEO, conversion rates, and user experience — and what you can do about it.",
-    image: "/blog/performance.jpg",
+    image: "https://picsum.photos/seed/cws-blog-perf/1200/750",
     date: "2024-01-02",
     readTime: "6 min",
     category: "Performance",
@@ -42,7 +42,7 @@ const posts = [
     slug: "small-business-web-security",
     title: "Web Security Essentials for Small Businesses",
     excerpt: "Protect your business and customers with these essential security practices every website owner should know.",
-    image: "/blog/security.jpg",
+    image: "https://picsum.photos/seed/cws-blog-sec/1200/750",
     date: "2023-12-20",
     readTime: "8 min",
     category: "Security",
@@ -62,14 +62,14 @@ export default function BlogPage() {
 
   return (
     <div className="flex flex-col">
-      {/* Header - Dark */}
-      <section className="py-24 md:py-32">
+      {/* Header */}
+      <section className="py-24 md:py-32 bg-hero hero-texture text-hero-foreground">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="font-serif text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl leading-[0.95]">
+            <h1 className="font-sans text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl leading-none">
               Insights & Updates
             </h1>
-            <p className="mt-8 text-xl text-muted-foreground leading-relaxed">
+            <p className="mt-8 text-xl text-hero-foreground/70 leading-relaxed">
               Practical advice on web development, digital strategy, and building better business tools.
             </p>
           </div>
@@ -182,7 +182,7 @@ export default function BlogPage() {
       </section>
 
       {/* CTA - Accent */}
-      <section className="py-24 md:py-32 bg-primary text-primary-foreground">
+      <section className="py-24 md:py-32 bg-primary primary-texture text-primary-foreground">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-4xl font-bold tracking-tight md:text-5xl">
@@ -192,10 +192,10 @@ export default function BlogPage() {
               {"Let's discuss your project and see how we can help."}
             </p>
             <div className="mt-10">
-              <Button 
-                size="lg" 
-                variant="secondary" 
-                className="bg-white text-primary hover:bg-white/90 text-base px-8 py-6"
+              <Button
+                size="lg"
+                variant="secondary"
+                className="bg-white text-primary hover:bg-white/90"
                 asChild
               >
                 <Link href="/contact">

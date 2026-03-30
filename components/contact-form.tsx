@@ -79,33 +79,43 @@ export function ContactForm() {
         {/* Name */}
         <div className="space-y-2">
           <Label htmlFor="name" className="text-section-light-foreground">
-            Name <span className="text-destructive">*</span>
+            Name <span className="text-destructive" aria-hidden="true">*</span>
+            <span className="sr-only">(required)</span>
           </Label>
           <Input
             id="name"
             name="name"
             placeholder="John Smith"
+            required
+            aria-required="true"
+            aria-describedby={errors.name ? "name-error" : undefined}
+            aria-invalid={!!errors.name}
             className={`bg-white border-section-light-foreground/20 text-section-light-foreground placeholder:text-section-light-muted ${errors.name ? "border-destructive" : ""}`}
           />
           {errors.name && (
-            <p className="text-sm text-destructive">{errors.name}</p>
+            <p id="name-error" role="alert" className="text-sm text-destructive">{errors.name}</p>
           )}
         </div>
 
         {/* Email */}
         <div className="space-y-2">
           <Label htmlFor="email" className="text-section-light-foreground">
-            Email <span className="text-destructive">*</span>
+            Email <span className="text-destructive" aria-hidden="true">*</span>
+            <span className="sr-only">(required)</span>
           </Label>
           <Input
             id="email"
             name="email"
             type="email"
             placeholder="john@example.com"
+            required
+            aria-required="true"
+            aria-describedby={errors.email ? "email-error" : undefined}
+            aria-invalid={!!errors.email}
             className={`bg-white border-section-light-foreground/20 text-section-light-foreground placeholder:text-section-light-muted ${errors.email ? "border-destructive" : ""}`}
           />
           {errors.email && (
-            <p className="text-sm text-destructive">{errors.email}</p>
+            <p id="email-error" role="alert" className="text-sm text-destructive">{errors.email}</p>
           )}
         </div>
       </div>
@@ -173,7 +183,7 @@ export function ContactForm() {
       </div>
 
       {/* Submit */}
-      <Button type="submit" size="lg" className="w-full text-base py-6" disabled={isSubmitting}>
+      <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
         {isSubmitting ? (
           <>
             <Loader2 className="mr-2 h-4 w-4 animate-spin" />

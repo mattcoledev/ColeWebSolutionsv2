@@ -37,14 +37,14 @@ const hostingIncludes = [
 export default function ServicesPage() {
   return (
     <div className="flex flex-col">
-      {/* Header - Dark */}
-      <section className="py-24 md:py-32">
+      {/* Header */}
+      <section className="py-24 md:py-32 bg-hero hero-texture text-hero-foreground">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="font-serif text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl leading-[0.95]">
+            <h1 className="font-sans text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl leading-none">
               What We Actually Build
             </h1>
-            <p className="mt-8 text-xl text-muted-foreground leading-relaxed">
+            <p className="mt-8 text-xl text-hero-foreground/70 leading-relaxed">
               Three core offerings. Each one done right.
             </p>
           </div>
@@ -104,7 +104,7 @@ export default function ServicesPage() {
           <div className="grid gap-16 lg:grid-cols-2 lg:gap-20 items-center">
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-card order-2 lg:order-1">
               <Image
-                src="/projects/chamber-website.jpg"
+                src="https://picsum.photos/seed/cws-chamber/800/600"
                 alt="Website redesign example"
                 fill
                 className="object-cover"
@@ -206,7 +206,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA - Accent */}
-      <section className="py-24 md:py-32 bg-primary text-primary-foreground">
+      <section className="py-24 md:py-32 bg-primary primary-texture text-primary-foreground">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-4xl font-bold tracking-tight md:text-5xl">
@@ -216,10 +216,10 @@ export default function ServicesPage() {
               {"Let's figure it out together. Schedule a free consultation and we will help you find the right solution for your business."}
             </p>
             <div className="mt-10">
-              <Button 
-                size="lg" 
-                variant="secondary" 
-                className="bg-white text-primary hover:bg-white/90 text-base px-8 py-6"
+              <Button
+                size="lg"
+                variant="secondary"
+                className="bg-white text-primary hover:bg-white/90"
                 asChild
               >
                 <Link href="/contact">

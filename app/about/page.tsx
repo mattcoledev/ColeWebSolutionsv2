@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -43,15 +44,15 @@ const stats = [
 export default function AboutPage() {
   return (
     <div className="flex flex-col">
-      {/* Header - Dark */}
-      <section className="py-24 md:py-32">
+      {/* Header */}
+      <section className="py-24 md:py-32 bg-hero hero-texture text-hero-foreground">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="font-serif text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl leading-[0.95]">
+            <h1 className="font-sans text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl leading-none">
               Not an Agency. A Partner.
             </h1>
-            <p className="mt-8 text-xl text-muted-foreground leading-relaxed">
-              ColeWebSolutions is a one-person operation. That means you talk 
+            <p className="mt-8 text-xl text-hero-foreground/70 leading-relaxed">
+              ColeWebSolutions is a one-person operation. That means you talk
               directly to the person who builds your site.
             </p>
           </div>
@@ -61,7 +62,15 @@ export default function AboutPage() {
       {/* The Story - Light */}
       <section className="py-24 md:py-32 bg-section-light text-section-light-foreground">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid gap-16 lg:grid-cols-2 lg:gap-20 items-start">
+          <div className="grid gap-16 lg:grid-cols-2 lg:gap-20 items-center">
+            <div className="relative aspect-[3/4] rounded-xl overflow-hidden bg-card">
+              <Image
+                src="https://picsum.photos/seed/cws-about-person/600/800"
+                alt="Matt Cole — ColeWebSolutions"
+                fill
+                className="object-cover"
+              />
+            </div>
             <div>
               <p className="text-sm font-medium uppercase tracking-widest text-primary mb-4">
                 The Story
@@ -69,8 +78,7 @@ export default function AboutPage() {
               <h2 className="font-serif text-4xl font-bold tracking-tight md:text-5xl leading-[1.1]">
                 Building for Real Businesses Since Day One
               </h2>
-            </div>
-            <div className="space-y-6 text-lg text-section-light-muted leading-relaxed">
+            <div className="mt-6 space-y-6 text-lg text-section-light-muted leading-relaxed">
               <p>
                 [PLACEHOLDER - Add your personal story here. How did you get into web development? 
                 What drove you to start ColeWebSolutions? This should feel authentic and human.]
@@ -87,11 +95,12 @@ export default function AboutPage() {
                 and genuine investment in our clients success.
               </p>
             </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Bar - Dark */}
+      {/* Stats Bar */}
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-wrap justify-center gap-16 md:gap-24 lg:gap-32">
@@ -194,7 +203,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA - Accent */}
-      <section className="py-24 md:py-32 bg-primary text-primary-foreground">
+      <section className="py-24 md:py-32 bg-primary primary-texture text-primary-foreground">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-4xl font-bold tracking-tight md:text-5xl">
@@ -204,10 +213,10 @@ export default function AboutPage() {
               {"Let's discuss your project and see if we are a good fit."}
             </p>
             <div className="mt-10">
-              <Button 
-                size="lg" 
-                variant="secondary" 
-                className="bg-white text-primary hover:bg-white/90 text-base px-8 py-6"
+              <Button
+                size="lg"
+                variant="secondary"
+                className="bg-white text-primary hover:bg-white/90"
                 asChild
               >
                 <Link href="/contact">

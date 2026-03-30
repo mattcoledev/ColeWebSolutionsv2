@@ -3,63 +3,68 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* ColeWebSolutions - B&W with Electric Blue accent + Section Contrast */
-/* Dark: #0B0B0B | Light: #F8FAFC | Soft Gray: #E5E7EB | Accent: #2563EB */
+/* ColeWebSolutions — Flat Design, Professional Dark Navy */
+/* Primary: #1D4ED8 | Background: #FFFFFF | Hero: #0F172A */
 :root {
-  /* Pure black background */
-  --background: #0B0B0B;
-  --foreground: #FFFFFF;
-  
+  /* Clean white base */
+  --background: #FFFFFF;
+  --foreground: #0F172A;
+
   /* Card surfaces */
-  --card: #141414;
-  --card-foreground: #FFFFFF;
-  
-  --popover: #141414;
-  --popover-foreground: #FFFFFF;
-  
-  /* Electric blue accent as primary */
-  --primary: #2563EB;
+  --card: #FFFFFF;
+  --card-foreground: #0F172A;
+
+  --popover: #FFFFFF;
+  --popover-foreground: #0F172A;
+
+  /* Vivid blue primary */
+  --primary: #1D4ED8;
   --primary-foreground: #FFFFFF;
-  
-  /* Secondary elements */
-  --secondary: #1C1C1C;
-  --secondary-foreground: #D1D5DB;
-  
-  --muted: #1C1C1C;
-  --muted-foreground: #9CA3AF;
-  
-  /* Electric blue accent */
-  --accent: #2563EB;
+
+  /* Subtle slate secondary */
+  --secondary: #F1F5F9;
+  --secondary-foreground: #0F172A;
+
+  --muted: #F8FAFC;
+  --muted-foreground: #64748B;
+
+  /* Align accent with primary — no orange */
+  --accent: #1D4ED8;
   --accent-foreground: #FFFFFF;
-  
+
   --destructive: #DC2626;
   --destructive-foreground: #FFFFFF;
-  
-  --border: #262626;
-  --input: #1C1C1C;
-  --ring: #2563EB;
-  
-  --chart-1: #2563EB;
+
+  --border: #E2E8F0;
+  --input: #F8FAFC;
+  --ring: #1D4ED8;
+
+  --chart-1: #1D4ED8;
   --chart-2: #3B82F6;
   --chart-3: #60A5FA;
   --chart-4: #93C5FD;
   --chart-5: #BFDBFE;
-  
+
   --radius: 0.375rem;
-  
-  /* Light section colors */
+
+  /* Alternate section — subtle slate tint */
   --section-light: #F8FAFC;
-  --section-light-foreground: #0B0B0B;
-  --section-light-muted: #6B7280;
-  
-  --sidebar: #0B0B0B;
-  --sidebar-foreground: #FFFFFF;
-  --sidebar-primary: #2563EB;
+  --section-light-foreground: #0F172A;
+  --section-light-muted: #64748B;
+
+  /* Dark hero/header sections */
+  --hero: #0F172A;
+  --hero-foreground: #FFFFFF;
+  --hero-muted: rgba(255, 255, 255, 0.65);
+
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #0F172A;
+  --sidebar-primary: #1D4ED8;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #1C1C1C;
-  --sidebar-accent-foreground: #FFFFFF;
-  --sidebar-border: #262626;
-  --sidebar-ring: #2563EB;
+  --sidebar-accent: #F1F5F9;
+  --sidebar-accent-foreground: #0F172A;
+  --sidebar-border: #E2E8F0;
+  --sidebar-ring: #1D4ED8;
 }
 
 .dark {
@@ -69,43 +74,53 @@
   --card-foreground: #FFFFFF;
   --popover: #141414;
   --popover-foreground: #FFFFFF;
-  --primary: #2563EB;
+  --primary: #3B82F6;
   --primary-foreground: #FFFFFF;
   --secondary: #1C1C1C;
   --secondary-foreground: #D6D6D6;
   --muted: #1C1C1C;
   --muted-foreground: #A0A0A0;
-  --accent: #2563EB;
+  --accent: #3B82F6;
   --accent-foreground: #FFFFFF;
   --destructive: #DC2626;
   --destructive-foreground: #FFFFFF;
   --border: #262626;
   --input: #1C1C1C;
-  --ring: #2563EB;
-  --chart-1: #2563EB;
-  --chart-2: #3B82F6;
-  --chart-3: #60A5FA;
-  --chart-4: #93C5FD;
-  --chart-5: #BFDBFE;
+  --ring: #3B82F6;
+  --chart-1: #3B82F6;
+  --chart-2: #60A5FA;
+  --chart-3: #93C5FD;
+  --chart-4: #BFDBFE;
+  --chart-5: #DBEAFE;
+  --section-light: #1C1C1C;
+  --section-light-foreground: #FFFFFF;
+  --section-light-muted: #A0A0A0;
+  --hero: #000000;
+  --hero-foreground: #FFFFFF;
+  --hero-muted: rgba(255, 255, 255, 0.60);
   --sidebar: #0B0B0B;
   --sidebar-foreground: #FFFFFF;
-  --sidebar-primary: #2563EB;
+  --sidebar-primary: #3B82F6;
   --sidebar-primary-foreground: #FFFFFF;
   --sidebar-accent: #1C1C1C;
   --sidebar-accent-foreground: #FFFFFF;
   --sidebar-border: #262626;
-  --sidebar-ring: #2563EB;
+  --sidebar-ring: #3B82F6;
 }
 
 @theme inline {
-  --font-sans: 'Inter', 'Inter Fallback', system-ui, sans-serif;
-  --font-serif: 'Space Grotesk', 'Space Grotesk Fallback', system-ui, sans-serif;
+  --font-sans: var(--font-jakarta), 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-serif: var(--font-jakarta), 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-heading: var(--font-jakarta), 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'JetBrains Mono Fallback', monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-section-light: var(--section-light);
   --color-section-light-foreground: var(--section-light-foreground);
   --color-section-light-muted: var(--section-light-muted);
+  --color-hero: var(--hero);
+  --color-hero-foreground: var(--hero-foreground);
+  --color-hero-muted: var(--hero-muted);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
@@ -143,10 +158,49 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+  html {
+    scroll-behavior: smooth;
   }
+
+  * {
+    @apply border-border;
+    outline: none;
+  }
+
+  /* Keyboard-accessible focus ring — visible on all interactive elements */
+  *:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Texture overlays — background-image only, use alongside bg-hero / bg-primary */
+.hero-texture {
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    radial-gradient(ellipse 80% 60% at 15% 0%, rgba(29, 78, 216, 0.40) 0%, transparent 65%);
+  background-size: 28px 28px, 100% 100%;
+}
+
+.primary-texture {
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(ellipse 70% 60% at 85% 100%, rgba(255, 255, 255, 0.10) 0%, transparent 60%);
+  background-size: 28px 28px, 100% 100%;
+}
+
+/* Respect user motion preferences for all CSS animations and transitions */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

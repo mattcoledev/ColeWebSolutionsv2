@@ -16,42 +16,42 @@ const projects = [
     slug: "riverside-medical-portal",
     title: "Riverside Medical Group",
     description: "Custom patient portal with appointment scheduling and secure messaging.",
-    image: "/projects/medical-portal.jpg",
+    image: "https://picsum.photos/seed/cws-medical/1200/750",
     tags: ["Custom Build", "Healthcare"],
   },
   {
     slug: "tupelo-chamber-redesign",
     title: "Tupelo Chamber of Commerce",
     description: "Complete website redesign with event management and member directory.",
-    image: "/projects/chamber-website.jpg",
+    image: "https://picsum.photos/seed/cws-chamber/1200/750",
     tags: ["Redesign", "Umbraco"],
   },
   {
     slug: "magnolia-realty-platform",
     title: "Magnolia Realty",
     description: "Property listing platform with advanced search and virtual tour integration.",
-    image: "/projects/realty-platform.jpg",
+    image: "https://picsum.photos/seed/cws-realty/1200/750",
     tags: ["Custom Build", "Real Estate"],
   },
   {
     slug: "delta-manufacturing-dashboard",
     title: "Delta Manufacturing",
     description: "Internal dashboard for production tracking and inventory management.",
-    image: "/projects/manufacturing-dashboard.jpg",
+    image: "https://picsum.photos/seed/cws-manufacturing/1200/750",
     tags: ["Custom Build", "Manufacturing"],
   },
   {
     slug: "southern-hospitality-booking",
     title: "Southern Hospitality Inn",
     description: "Booking system with channel management and payment processing.",
-    image: "/projects/hospitality-booking.jpg",
+    image: "https://picsum.photos/seed/cws-hospitality/1200/750",
     tags: ["Custom Build", "Hospitality"],
   },
   {
     slug: "northeast-legal-website",
     title: "Northeast Legal Associates",
     description: "Professional website with client intake forms and document management.",
-    image: "/projects/legal-website.jpg",
+    image: "https://picsum.photos/seed/cws-legal/1200/750",
     tags: ["Redesign", "Legal"],
   },
 ]
@@ -59,14 +59,14 @@ const projects = [
 export default function WorkPage() {
   return (
     <div className="flex flex-col">
-      {/* Header - Dark */}
-      <section className="py-24 md:py-32">
+      {/* Header */}
+      <section className="py-24 md:py-32 bg-hero hero-texture text-hero-foreground">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="font-serif text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl leading-[0.95]">
+            <h1 className="font-sans text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl leading-none">
               Work That Speaks for Itself
             </h1>
-            <p className="mt-8 text-xl text-muted-foreground leading-relaxed">
+            <p className="mt-8 text-xl text-hero-foreground/70 leading-relaxed">
               Each project represents a unique challenge solved and a business transformed.
             </p>
           </div>
@@ -120,7 +120,7 @@ export default function WorkPage() {
       </section>
 
       {/* CTA - Accent */}
-      <section className="py-24 md:py-32 bg-primary text-primary-foreground">
+      <section className="py-24 md:py-32 bg-primary primary-texture text-primary-foreground">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-4xl font-bold tracking-tight md:text-5xl">
@@ -130,10 +130,10 @@ export default function WorkPage() {
               {"Let's discuss your project and see how we can help your business grow."}
             </p>
             <div className="mt-10">
-              <Button 
-                size="lg" 
-                variant="secondary" 
-                className="bg-white text-primary hover:bg-white/90 text-base px-8 py-6"
+              <Button
+                size="lg"
+                variant="secondary"
+                className="bg-white text-primary hover:bg-white/90"
                 asChild
               >
                 <Link href="/contact">

@@ -37,14 +37,14 @@ const contactInfo = [
 export default function ContactPage() {
   return (
     <div className="flex flex-col">
-      {/* Header - Dark */}
-      <section className="py-24 md:py-32">
+      {/* Header */}
+      <section className="py-24 md:py-32 bg-hero hero-texture text-hero-foreground">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="font-serif text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl leading-[0.95]">
+            <h1 className="font-sans text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl leading-none">
               {"Let's Talk About Your Project"}
             </h1>
-            <p className="mt-8 text-xl text-muted-foreground leading-relaxed">
+            <p className="mt-8 text-xl text-hero-foreground/70 leading-relaxed">
               Whether you have a detailed brief or just a rough idea, we would love to hear from you.
             </p>
           </div>
