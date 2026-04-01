@@ -31,16 +31,16 @@ const customForYou = [
 
 const featuredProjects = [
   {
-    title: "Riverside Medical Group",
-    description: "Custom patient portal with appointment scheduling and secure messaging.",
+    title: "Benson's Plumbing & Heating",
+    description: "Outdated site modernized with a clean layout, strong call-to-action, and mobile-first design that drives more service calls.",
     image: "/projects/dem1.png",
-    tags: ["Custom Build", "Healthcare"],
+    tags: ["Redesign", "Home Services"],
   },
   {
-    title: "Southern Hospitality Inn",
-    description: "Booking system with channel management, availability calendar, and payment processing.",
+    title: "Hartwell Family Dentistry",
+    description: "Full redesign with a modern look, online appointment prompts, and trust-focused layout built to convert new patients.",
     image: "/projects/dem2.png",
-    tags: ["Custom Build", "Hospitality"],
+    tags: ["Redesign", "Professional Services"],
   },
   {
     title: "Delta Manufacturing",
@@ -266,13 +266,6 @@ export default function HomePage() {
                 Projects We're Proud Of
               </h2>
             </div>
-            <Link
-              href="/work"
-              className="hidden md:inline-flex items-center text-base font-medium text-primary hover:underline underline-offset-4"
-            >
-              See all projects
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {featuredProjects.map((project) => (
@@ -303,15 +296,6 @@ export default function HomePage() {
                 </p>
               </article>
             ))}
-          </div>
-          <div className="mt-12 md:hidden">
-            <Link
-              href="/work"
-              className="inline-flex items-center text-base font-medium text-primary hover:underline underline-offset-4"
-            >
-              See all projects
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
           </div>
         </div>
       </section>
