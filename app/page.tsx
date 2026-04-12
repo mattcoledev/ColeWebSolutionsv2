@@ -458,30 +458,43 @@ export default function HomePage() {
       </section>
 
       {/* ── ABOUT ─────────────────────────────────────────────────────── */}
-      <section id="about" className="py-24 md:py-32 scroll-mt-20">
+      <section id="about" className="py-24 md:py-32 scroll-mt-20 bg-hero hero-texture text-hero-foreground">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid gap-16 lg:grid-cols-2 lg:gap-20 items-center">
-            <AboutVisual />
+            <div className="flex flex-col items-center gap-4 max-w-xs mx-auto w-full">
+              <div className="relative aspect-[3/4] w-full rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src="/MattColeHeadShot.png"
+                  alt="Matt Cole — ColeWebSolutions"
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+              <div className="text-center">
+                <p className="font-sans font-semibold text-hero-foreground">Matt Cole</p>
+                <p className="text-sm text-hero-foreground/50">Founder, ColeWebSolutions</p>
+              </div>
+            </div>
             <div>
-              <p className="text-sm font-medium uppercase tracking-widest text-primary mb-4">
+              <p className="text-sm font-medium uppercase tracking-widest text-hero-foreground/50 mb-4">
                 About
               </p>
               <h2 className="font-sans text-4xl font-bold tracking-tight md:text-5xl leading-[1.1]">
                 {"Not an Agency. A Partner."}
               </h2>
-              <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+              <p className="mt-6 text-lg text-hero-foreground/70 leading-relaxed">
                 ColeWebSolutions is a one-person operation based in Tupelo, Mississippi. That means you talk directly to the person who builds your site — no layers, no handoffs, no miscommunication.
               </p>
-              <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+              <p className="mt-4 text-lg text-hero-foreground/70 leading-relaxed">
                 {"I've spent over a decade building web applications for businesses across healthcare, manufacturing, hospitality, and professional services. Every project gets my full attention."}
               </p>
-              <div className="mt-10 flex gap-12 border-t border-border pt-10">
+              <div className="mt-10 flex gap-12 border-t border-white/10 pt-10">
                 {stats.map((stat) => (
                   <div key={stat.label}>
                     <div className="font-sans text-4xl font-bold text-primary">
                       {stat.value}
                     </div>
-                    <div className="mt-1 text-sm text-muted-foreground">
+                    <div className="mt-1 text-sm text-hero-foreground/50">
                       {stat.label}
                     </div>
                   </div>
