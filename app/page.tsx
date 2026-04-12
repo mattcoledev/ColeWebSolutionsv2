@@ -1,8 +1,11 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Check, Mail, Phone, MapPin, Clock } from "lucide-react"
+import { ArrowRight, Check, Mail, Phone, MapPin, Clock, Mic, GraduationCap, UserCheck, PhoneMissed, CalendarCheck, FolderOpen, BarChart3, Calculator, Zap, Target } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ContactForm } from "@/components/contact-form"
+import { HeroAnimation } from "@/components/hero-animation"
+import { AboutVisual } from "@/components/about-visual"
+import { WebDesignVisual } from "@/components/web-design-visual"
 
 const designIncludes = [
   "Full visual redesign",
@@ -22,11 +25,37 @@ const hostingIncludes = [
   "Direct access to your developer",
 ]
 
-const customForYou = [
-  "You're copying data between systems manually",
-  "Your current website can't do what your business needs",
-  "You need something that doesn't exist off the shelf",
-  "You want to automate a manual business process",
+const customTools = [
+  {
+    icon: CalendarCheck,
+    title: "Appointment & Booking Systems",
+    description: "Let customers book online with real-time availability. Automated confirmations and reminders. No more phone tag or double bookings. Works on your website, syncs with your calendar.",
+  },
+  {
+    icon: FolderOpen,
+    title: "Client Portals",
+    description: "Give your customers a login where they can view project status, approve work, download documents, and pay invoices. Fewer emails, fewer calls asking \"where are we at.\"",
+  },
+  {
+    icon: BarChart3,
+    title: "Internal Dashboards",
+    description: "See your whole business in one place. Track jobs, monitor revenue, manage leads, view team schedules. Built around your data, not someone else's template.",
+  },
+  {
+    icon: Calculator,
+    title: "Custom Calculators & Quoting Tools",
+    description: "Let website visitors get instant estimates. Roofing calculators, service pricing tools, loan estimators. Captures the lead while giving them value upfront.",
+  },
+  {
+    icon: Zap,
+    title: "Workflow Automation",
+    description: "Stop doing the same thing manually every day. Automated follow-up emails, job status updates, inventory alerts, report generation. If you do it repeatedly, we can automate it.",
+  },
+  {
+    icon: Target,
+    title: "Landing Pages",
+    description: "Purpose-built pages for ads, campaigns, or specific services. No navigation, no distractions — just one offer, one message, and one call to action aimed at turning ad spend into actual leads.",
+  },
 ]
 
 const featuredProjects = [
@@ -38,9 +67,9 @@ const featuredProjects = [
   },
   {
     title: "Hartwell Family Dentistry",
-    description: "Full redesign with a modern look, online appointment prompts, and trust-focused layout built to convert new patients.",
+    description: "Full redesign paired with a custom booking system — patients schedule online, staff see availability in real time, and no-shows dropped with automated reminders.",
     image: "/projects/dem2.png",
-    tags: ["Redesign", "Professional Services"],
+    tags: ["Redesign", "Booking System"],
   },
   {
     title: "Delta Manufacturing",
@@ -50,10 +79,65 @@ const featuredProjects = [
   },
 ]
 
+const voiceUseCases = [
+  {
+    icon: PhoneMissed,
+    title: "After-Hours Coverage",
+    description: "Never lose a lead to voicemail again. Your AI agent answers questions and captures contact info when your team is off the clock.",
+  },
+  {
+    icon: UserCheck,
+    title: "Front Desk Relief",
+    description: "Free up your front desk staff. The agent handles FAQs, appointment scheduling, and basic intake so your team can focus on the people in front of them.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Sales Call Training",
+    description: "Let your team practice sales calls with AI-powered customers that push back, ask tough questions, and give coaching feedback after every session.",
+  },
+  {
+    icon: Mic,
+    title: "Lead Qualification",
+    description: "Your agent asks the right questions, identifies serious prospects, and sends you the details — no tire-kickers wasting your time.",
+  },
+]
+
+const voiceVerticals = [
+  "Home Services",
+  "Medical & Dental",
+  "Legal",
+  "Real Estate",
+  "Sales Teams",
+]
+
+const testimonials = [
+  {
+    quote: "More new client inquiries came in the first month after launch than all of last year combined. In law, people judge you before they ever pick up the phone. The site finally reflects who we are.",
+    name: "James K.",
+    title: "Partner",
+    company: "Kellerman & Associates",
+    initials: "JK",
+  },
+  {
+    quote: "I was skeptical about switching systems, but the booking integration made a real difference. Patients actually use it, our front desk has less phone traffic, and no-shows are way down.",
+    name: "Dr. Sarah H.",
+    title: "Owner",
+    company: "Hartwell Family Dentistry",
+    initials: "SH",
+  },
+  {
+    quote: "The site has been rock solid. Anytime something small comes up he takes care of it quickly and I never have to follow up twice. It's just one less thing I have to think about.",
+    name: "Rachel S.",
+    title: "Owner",
+    company: "Cedar Hill Wellness",
+    initials: "RS",
+  },
+]
+
 const stats = [
-  { value: "30+", label: "Clients Served" },
+  { value: "50+", label: "Clients Served" },
   { value: "10+", label: "Years Building" },
-  { value: "100%", label: "Retention" },
+  { value: "< 1 Day", label: "Avg. Response Time" },
 ]
 
 const contactInfo = [
@@ -68,44 +152,43 @@ export default function HomePage() {
     <div className="flex flex-col">
 
       {/* ── HERO ──────────────────────────────────────────────────────── */}
-      <section id="hero" className="relative overflow-hidden py-24 md:py-32 lg:py-40 bg-hero hero-texture text-hero-foreground">
-        {/* Full-height image — fades out to the left */}
-        <div className="absolute inset-0 hidden lg:block">
-          <Image
-            src="/projects/hero1.png"
-            alt="Custom web application dashboard"
-            fill
-            className="object-cover object-right"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] from-35% via-[#0F172A]/75 via-55% to-transparent" />
-        </div>
+      <section id="hero" className="relative overflow-hidden py-24 md:py-32 lg:py-36 bg-hero hero-texture text-hero-foreground">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-8">
 
-        {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 lg:px-8">
-          <div className="max-w-2xl">
-            <h1 className="font-sans text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl leading-none">
-              Custom Websites & Software for Growing Businesses.
-            </h1>
-            <p className="mt-8 text-xl text-hero-foreground/70 leading-relaxed">
-              We design, build, and maintain digital systems that save time, generate leads, and scale operations — from Tupelo, MS.
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="cursor-pointer" asChild>
-                <Link href="/#contact">
-                  Get a Quote
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-transparent border-white/40 text-white hover:bg-white/10 hover:text-white cursor-pointer"
-                asChild
-              >
-                <Link href="/#work">See Our Work</Link>
-              </Button>
+            {/* Left: copy */}
+            <div>
+              <h1 className="font-sans text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl leading-none">
+                Custom Websites & Software for Growing Businesses.
+              </h1>
+              <p className="mt-8 text-xl text-hero-foreground/70 leading-relaxed">
+                We design, build, and maintain digital systems that save time, generate leads, and scale operations — from Tupelo, MS.
+              </p>
+              <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="cursor-pointer" asChild>
+                  <Link href="/#contact">
+                    Get a Quote
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-transparent border-white/40 text-white hover:bg-white/10 hover:text-white cursor-pointer"
+                  asChild
+                >
+                  <Link href="/#work">See Our Work</Link>
+                </Button>
+              </div>
             </div>
+
+            {/* Right: animated SVG */}
+            <div className="hidden lg:flex items-center justify-end">
+              <div className="w-full max-w-[560px]">
+                <HeroAnimation />
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -146,63 +229,137 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src="/projects/webdesign1.png"
-                alt="Website redesign example"
-                fill
-                className="object-cover"
-              />
-            </div>
+            <WebDesignVisual />
           </div>
         </div>
       </section>
 
-      {/* ── CUSTOM APPS ───────────────────────────────────────────────── */}
-      <section id="custom-apps" className="py-24 md:py-32 scroll-mt-20">
+      {/* ── CUSTOM TOOLS ──────────────────────────────────────────────── */}
+      <section id="custom-tools" className="py-24 md:py-32 scroll-mt-20">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid gap-16 lg:grid-cols-2 lg:gap-20 items-center">
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg order-2 lg:order-1">
-              <Image
-                src="/projects/workflow.png"
-                alt="Custom application dashboard"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="order-1 lg:order-2">
-              <p className="text-sm font-medium uppercase tracking-widest text-primary mb-4">
-                Custom Development
-              </p>
-              <h2 className="font-sans text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl leading-[1.1]">
-                {"Built Around Your Workflow, Not Someone Else's Template"}
-              </h2>
-              <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                From patient portals and booking systems to internal dashboards and third-party integrations — we build exactly what your business needs, nothing more and nothing less.
-              </p>
-              <div className="mt-10">
-                <p className="text-sm font-medium uppercase tracking-widest text-muted-foreground mb-5">
-                  This might be for you if...
-                </p>
-                <ul className="space-y-4">
-                  {customForYou.map((item) => (
-                    <li key={item} className="flex items-start gap-4">
-                      <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-base text-muted-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+
+          {/* Header */}
+          <div className="max-w-3xl mb-16">
+            <p className="text-sm font-medium uppercase tracking-widest text-primary mb-4">
+              Custom Tools
+            </p>
+            <h2 className="font-sans text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl leading-[1.1]">
+              Custom Tools Built for How You Work
+            </h2>
+            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+              Stop duct-taping your business together with spreadsheets, paper forms, and disconnected apps. We build custom tools — booking systems, client portals, job trackers, internal dashboards — designed around your exact workflow. No subscriptions to software you only half-use.
+            </p>
+          </div>
+
+          {/* Tool Cards — 5 items: 3 on top row, 2 centered on bottom */}
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {customTools.map((tool) => (
+              <div
+                key={tool.title}
+                className="bg-section-light rounded-xl p-7 border border-border flex flex-col gap-4"
+              >
+                <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <tool.icon className="h-5 w-5 text-primary" aria-hidden="true" />
+                </div>
+                <div>
+                  <h3 className="font-sans text-base font-semibold tracking-tight mb-2">
+                    {tool.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {tool.description}
+                  </p>
+                </div>
               </div>
-              <div className="mt-10">
-                <Button size="lg" asChild>
-                  <Link href="/#contact">
-                    Discuss Your Project
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="mt-14 pt-12 border-t border-border">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+              <p className="text-lg text-muted-foreground">
+                Have a process that needs fixing?
+              </p>
+              <Button size="lg" asChild>
+                <Link href="/#contact">
+                  {"Let's Talk"}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
             </div>
           </div>
+
+        </div>
+      </section>
+
+      {/* ── AI VOICE AGENTS ───────────────────────────────────────────── */}
+      <section id="ai-agents" className="py-24 md:py-32 scroll-mt-20 bg-section-light text-section-light-foreground">
+        <div className="container mx-auto px-4 lg:px-8">
+
+          {/* Header */}
+          <div className="max-w-3xl mb-16">
+            <p className="text-sm font-medium uppercase tracking-widest text-primary mb-4">
+              AI Voice Agents
+            </p>
+            <h2 className="font-sans text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl leading-[1.1]">
+              Never Miss Another Call
+            </h2>
+            <p className="mt-6 text-xl text-section-light-muted leading-relaxed">
+              Custom AI voice agents that answer questions, capture leads, and book appointments — 24/7, right on your website.
+            </p>
+            <p className="mt-4 text-lg text-section-light-muted leading-relaxed">
+              We build voice-powered assistants tailored to your business. Your customers click a button, start talking, and get real answers in a natural-sounding voice. No apps to download, no hold music, no missed opportunities. Works on any device with a browser and a microphone.
+            </p>
+          </div>
+
+          {/* Use Case Cards */}
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-16">
+            {voiceUseCases.map((item) => (
+              <div
+                key={item.title}
+                className="bg-background rounded-xl p-7 border border-border flex flex-col gap-4"
+              >
+                <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <item.icon className="h-5 w-5 text-primary" aria-hidden="true" />
+                </div>
+                <div>
+                  <h3 className="font-sans text-base font-semibold tracking-tight mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-section-light-muted leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Verticals + CTA */}
+          <div className="flex flex-col sm:flex-row sm:items-center gap-8 border-t border-section-light-foreground/10 pt-12">
+            <div className="flex-1">
+              <p className="text-sm font-medium uppercase tracking-widest text-section-light-muted mb-4">
+                Great for
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {voiceVerticals.map((v) => (
+                  <span
+                    key={v}
+                    className="px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20"
+                  >
+                    {v}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="flex-shrink-0">
+              <Button size="lg" asChild>
+                <Link href="/#contact">
+                  Book a 15-Minute Demo
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -304,14 +461,7 @@ export default function HomePage() {
       <section id="about" className="py-24 md:py-32 scroll-mt-20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid gap-16 lg:grid-cols-2 lg:gap-20 items-center">
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src="/projects/partner1.png"
-                alt="Matt Cole — ColeWebSolutions"
-                fill
-                className="object-cover"
-              />
-            </div>
+            <AboutVisual />
             <div>
               <p className="text-sm font-medium uppercase tracking-widest text-primary mb-4">
                 About
@@ -338,6 +488,51 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIALS ──────────────────────────────────────────────── */}
+      <section className="py-24 md:py-32 bg-hero hero-texture text-hero-foreground">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="mb-16">
+            <p className="text-sm font-medium uppercase tracking-widest text-hero-foreground/50 mb-4">
+              Reviews
+            </p>
+            <h2 className="font-sans text-4xl font-bold tracking-tight md:text-5xl leading-[1.1]">
+              What Clients Say
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {testimonials.map((t) => (
+              <div
+                key={t.name}
+                className="flex flex-col gap-5 rounded-xl border border-white/10 bg-white/5 p-7"
+              >
+                {/* Stars */}
+                <div className="flex gap-1">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <svg key={i} className="h-4 w-4 fill-amber-400" viewBox="0 0 20 20" aria-hidden="true">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                {/* Quote */}
+                <p className="flex-1 text-base leading-relaxed text-hero-foreground/75">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+                {/* Person */}
+                <div className="flex items-center gap-3 border-t border-white/10 pt-5">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/40">
+                    <span className="text-xs font-bold text-white">{t.initials}</span>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold">{t.name}</p>
+                    <p className="text-xs text-hero-foreground/50">{t.title}, {t.company}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
