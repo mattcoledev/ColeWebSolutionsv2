@@ -14,7 +14,7 @@ const demos = [
     subtitle: "Fictional demo — Harrington Heating & Cooling",
     description:
       "A full operations view for an HVAC company — job board, dispatch status, scheduling, customer history, and AI insights. Built to show what running a modern HVAC business actually looks like.",
-    href: "https://hvac-demo-delta.vercel.app/dashboard",
+    href: "https://hvac.colewebsolutions.com",
     available: true,
   },
 ]
