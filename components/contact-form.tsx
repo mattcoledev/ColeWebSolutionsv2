@@ -51,12 +51,33 @@ export function ContactForm() {
 
     setIsSubmitting(true)
 
-    // Simulate form submission - replace with actual API call
-    // e.g., Formspree, Netlify Forms, or custom API endpoint
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          phone: formData.get("phone") as string,
+          company: formData.get("company") as string,
+          service: formData.get("service") as string,
+          message: formData.get("message") as string,
+        }),
+      })
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+      if (!res.ok) {
+        const data = await res.json()
+        setErrors({ submit: data.error ?? "Something went wrong. Please try again." })
+        setIsSubmitting(false)
+        return
+      }
+
+      setIsSubmitted(true)
+    } catch {
+      setErrors({ submit: "Something went wrong. Please try again." })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (isSubmitted) {
@@ -181,6 +202,10 @@ export function ContactForm() {
           className="resize-none bg-white border-section-light-foreground/20 text-section-light-foreground placeholder:text-section-light-muted"
         />
       </div>
+
+      {errors.submit && (
+        <p role="alert" className="text-sm text-destructive text-center">{errors.submit}</p>
+      )}
 
       {/* Submit */}
       <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>

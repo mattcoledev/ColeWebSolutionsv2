@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/#custom-apps", label: "Custom Apps" },
   { href: "/#hosting", label: "Hosting" },
   { href: "/#work", label: "Work" },
+  { href: "/demos", label: "Demos" },
   { href: "/#about", label: "About" },
   { href: "/#contact", label: "Contact" },
 ]
