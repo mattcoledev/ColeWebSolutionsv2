@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -15,6 +16,7 @@ const demos = [
     description:
       "A full operations view for an HVAC company — job board, dispatch status, scheduling, customer history, and AI insights.",
     href: "https://hvac.colewebsolutions.com",
+    image: "/hvacdemo.png",
     available: true,
   },
   {
@@ -23,6 +25,7 @@ const demos = [
     description:
       "A route and inventory management system for a vending operator — machine locations, restock schedules, sales tracking by location, and alerts for low stock or service issues.",
     href: "https://vendor-dash-ivory.vercel.app/",
+    image: "/vendingdemo.png",
     available: true,
   },
 ]
@@ -59,6 +62,15 @@ export default function DemosPage() {
               key={demo.title}
               className="rounded-xl border border-border bg-card p-8 flex flex-col gap-6 sm:flex-row sm:items-start"
             >
+              <div className="sm:shrink-0 sm:w-48 rounded-lg overflow-hidden border border-border">
+                <Image
+                  src={demo.image}
+                  alt={demo.title}
+                  width={192}
+                  height={128}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div className="flex-1 space-y-3">
                 <div>
                   <h2 className="text-2xl font-bold text-foreground">{demo.title}</h2>
