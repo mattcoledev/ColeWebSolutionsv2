@@ -205,7 +205,7 @@ export default function HomePage() {
                 Websites That Convert Visitors Into Clients
               </h2>
               <p className="mt-6 text-lg text-section-light-muted leading-relaxed">
-                We rebuild outdated websites into fast, mobile-first experiences that build trust and generate leads. We specialize in Umbraco CMS — so you own your content and don't need to call a developer every time you need to make a change.
+                We rebuild outdated websites into fast, mobile-first experiences that build trust and generate leads. Every site we build runs on a modern CMS — so you own your content and can make changes without touching a developer.
               </p>
               <div className="mt-10 border-t border-section-light-foreground/10 pt-10">
                 <p className="text-sm font-medium uppercase tracking-widest text-section-light-muted mb-6">
