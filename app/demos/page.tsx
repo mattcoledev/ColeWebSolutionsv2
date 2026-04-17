@@ -17,6 +17,14 @@ const demos = [
     href: "https://hvac.colewebsolutions.com",
     available: true,
   },
+  {
+    title: "Vending & Cooler Management Portal",
+    subtitle: "Fictional demo — Summit Vend Co.",
+    description:
+      "A route and inventory management system for a vending operator — machine locations, restock schedules, sales tracking by location, and alerts for low stock or service issues. Built to show what managing a modern vending route actually looks like.",
+    href: "https://vendor-dash-ivory.vercel.app/",
+    available: true,
+  },
 ]
 
 export default function DemosPage() {
@@ -59,12 +67,16 @@ export default function DemosPage() {
                 <p className="text-muted-foreground leading-relaxed">{demo.description}</p>
               </div>
               <div className="flex flex-col gap-3 sm:shrink-0 sm:w-44">
-                <Button asChild>
-                  <a href={demo.href} target="_blank" rel="noopener noreferrer">
-                    View Demo
-                    <ExternalLink className="ml-2 h-4 w-4" aria-hidden="true" />
-                  </a>
-                </Button>
+                {demo.available ? (
+                  <Button asChild>
+                    <a href={demo.href} target="_blank" rel="noopener noreferrer">
+                      View Demo
+                      <ExternalLink className="ml-2 h-4 w-4" aria-hidden="true" />
+                    </a>
+                  </Button>
+                ) : (
+                  <Button disabled>Coming Soon</Button>
+                )}
                 <Button variant="outline" asChild>
                   <Link href="/#contact">
                     Book a Call
