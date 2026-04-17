@@ -24,7 +24,7 @@ const demos = [
     subtitle: "Fictional demo — Summit Vend Co.",
     description:
       "A route and inventory management system for a vending operator — machine locations, restock schedules, sales tracking by location, and alerts for low stock or service issues.",
-    href: "https://vendor-dash-ivory.vercel.app/",
+    href: "https://vending.colewebsolutions.com/",
     image: "/vendingdemo.png",
     available: true,
   },
