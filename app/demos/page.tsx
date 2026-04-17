@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const demos = [
   {
     title: "HVAC Operations Dashboard",
-    subtitle: "Fictional demo — Harrington Heating & Cooling",
+    subtitle: "Fictional demo — Riverside HVAC & Cooling",
     description:
       "A full operations view for an HVAC company — job board, dispatch status, scheduling, customer history, and AI insights. Built to show what running a modern HVAC business actually looks like.",
     href: "https://hvac.colewebsolutions.com",
