@@ -13,7 +13,7 @@ const demos = [
     title: "HVAC Operations Dashboard",
     subtitle: "Fictional demo — Riverside HVAC & Cooling",
     description:
-      "A full operations view for an HVAC company — job board, dispatch status, scheduling, customer history, and AI insights. Built to show what running a modern HVAC business actually looks like.",
+      "A full operations view for an HVAC company — job board, dispatch status, scheduling, customer history, and AI insights.",
     href: "https://hvac.colewebsolutions.com",
     available: true,
   },
@@ -21,7 +21,7 @@ const demos = [
     title: "Vending & Cooler Management Portal",
     subtitle: "Fictional demo — Summit Vend Co.",
     description:
-      "A route and inventory management system for a vending operator — machine locations, restock schedules, sales tracking by location, and alerts for low stock or service issues. Built to show what managing a modern vending route actually looks like.",
+      "A route and inventory management system for a vending operator — machine locations, restock schedules, sales tracking by location, and alerts for low stock or service issues.",
     href: "https://vendor-dash-ivory.vercel.app/",
     available: true,
   },
