@@ -369,16 +369,19 @@ export default function HomePage() {
           <div className="grid gap-16 lg:grid-cols-2 lg:gap-20 items-start">
             <div>
               <p className="text-sm font-medium uppercase tracking-widest text-hero-foreground/50 mb-4">
-                Managed Hosting
+                Managed Umbraco Hosting
               </p>
               <h2 className="font-sans text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl leading-[1.1]">
-                {"When Something Breaks at 2AM, You Call Me."}
+                Expert Hosting for Umbraco Websites. Real Support When You Need It.
               </h2>
               <p className="mt-6 text-lg text-hero-foreground/70 leading-relaxed">
-                Not a chatbot. Not a support ticket. A direct line to the same person who built your site. Premium, white-glove hosting with monitoring, backups, security updates, and a real human who picks up the phone.
+                Your website deserves more than generic hosting. Get managed Umbraco hosting backed by a developer who understands the platform, not a call center.
               </p>
               <p className="mt-4 text-lg text-hero-foreground/70 leading-relaxed">
-                When something goes wrong, you will not be waiting days for a response — you will be talking to the person who knows your system inside and out.
+                I handle monitoring, backups, security updates, performance optimization, and ongoing maintenance so your site stays fast, secure, and online.
+              </p>
+              <p className="mt-4 text-lg text-hero-foreground/70 leading-relaxed">
+                When something goes wrong, you won&apos;t be opening support tickets or waiting days for a response. You&apos;ll work directly with the person managing your website and hosting environment — someone who understands your site and can solve problems quickly.
               </p>
               <div className="mt-10">
                 <Button
